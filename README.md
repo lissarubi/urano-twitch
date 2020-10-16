@@ -2,6 +2,10 @@
 
 Urano is a CLI program to create twitch chat bots with simplicity.
 
+# Dependencies
+
+You will need `nodejs` and `sed` to use Urano. in any UNIX system the sed is pre-installed, but, if you don't have Nodejs [install it in the official site](https://nodejs.org/en/)
+
 # Install
 
 To install Urano run this command:
