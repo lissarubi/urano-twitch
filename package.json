@@ -1,6 +1,6 @@
 {
   "name": "uranotwitch",
-  "version": "1.2.5",
+  "version": "1.3.0",
   "description": "CLI Program to create twitch chatbots",
   "main": "src/cli.js",
   "bin": {

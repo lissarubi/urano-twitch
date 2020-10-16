@@ -66,6 +66,7 @@ Urano will ask about the command, the result of the command and if the command w
 
 ```
 [1] Simple Command
+[2] Pre-Build Commands
 [0] CANCEL
 
 What type of command do you want? [1/0]: 1
@@ -73,6 +74,54 @@ What is the command? (without !): mycommand
 What is the result of the mycommand?: this is my command
 Reply the user in the mycommand message? [y/n]: y
 ```
+
+### Pre-Build Commands
+
+Pre-Build Commands are a group of commands like Timeout command,  what you need to complete the informations and you can add it to your chatbot.
+
+```
+[1] Simple Command
+[2] Pre-Build commands
+[0] CANCEL
+
+What type of command do you want? [1, 2, 0]: 2
+
+[1] Timeout Command
+[0] CANCEL
+
+What Pre-Build command do you want? [1/0]:
+```
+
+#### Timeout Command
+
+You can add a Timeout Command to your chat, defining the command, the probability of the ban occurs, the timeout length, the message if the ban occurs and the message if the ban not occurs
+
+```
+[1] Timeout Command
+[0] CANCEL
+
+What Pre-Build command do you want? [1/0]: 1
+What is the command? (without !): timeout
+
+[1] 0.1
+[2] 0.2
+[3] 0.3
+[4] 0.4
+[5] 0.5
+[6] 0.6
+[7] 0.7
+[8] 0.9
+[0] CANCEL
+
+Which probability? [1...8 / 0]: 5
+What is the timeout length? (in seconds): 10
+What is the message if the ban occurs?: Timeout!
+What is the message if the ban not occurs?: Not Timeout!
+```
+
+Now you have the timeout command in your Stream!
+
+![timeout Example](assets/timeoutExample.png)
 
 ## Runing the your bot
 
