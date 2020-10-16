@@ -1,0 +1,33 @@
+{
+  "name": "uranotwitch",
+  "version": "1.0.0",
+  "description": "CLI Program to create twitch chatbots",
+  "main": "src/cli.js",
+  "bin": {
+    "urano": "src/cli.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "readline-sync": "^1.4.10",
+    "tmi.js": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js"
+  },
+  "keywords": [
+    "twitch",
+    "bot",
+    "chatbot",
+    "tmi",
+    "bot builder",
+    "bot creator"
+  ],
+  "author": "Ederson Ferreira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://edersonferreira/uranobot"
+  }
+}
