@@ -76,4 +76,4 @@ Reply the user in the mycommand message? [y/n]: y
 
 ## Runing the your bot
 
-Now, you can run the bot using `npm run serve` or `node run index`, and now, your bot is working!
+Now, you can run the bot using `npm run serve` or `node index.js`, and now, your bot is working!
