@@ -1,9 +1,14 @@
-const readlineSync = require('readline-sync')
-const write = require('../write')
+const readlineSync = require('readline-sync');
+const write = require('../write');
 const { execSync } = require('child_process');
 
-
-function generateFileContent(command, probability, timeoutTime, messageBan, messageNotBan){
+function generateFileContent(
+  command,
+  probability,
+  timeoutTime,
+  messageBan,
+  messageNotBan,
+) {
   return `function ${command}(message, user, client){
       if (message.split(' ')[0] == '!${command}') {
         const banned = message.split(' ')[1]
@@ -18,25 +23,42 @@ function generateFileContent(command, probability, timeoutTime, messageBan, mess
   }
 }
 
-module.exports = ${command}`
+module.exports = ${command}`;
 }
 
-function banCommand(){
-  const command = readlineSync.question('What is the command? (without !): ')
-  const optionsProbability = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.9]
-  const probability = readlineSync.keyInSelect(optionsProbability, 'Which probability?: ')
-  const probabilityNumber = optionsProbability[probability]
-  const timeoutTime = readlineSync.question('What is the timeout length? (in seconds): ')
-  const messageBan = readlineSync.question('What is the message if the ban occurs?: ')
-  const messageNotBan = readlineSync.question('What is the message if the ban not occurs?: ')
+function banCommand() {
+  const command = readlineSync.question('What is the command? (without !): ');
+  const optionsProbability = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.9];
+  const probability = readlineSync.keyInSelect(
+    optionsProbability,
+    'Which probability?: ',
+  );
+  const probabilityNumber = optionsProbability[probability];
+  const timeoutTime = readlineSync.question(
+    'What is the timeout length? (in seconds): ',
+  );
+  const messageBan = readlineSync.question(
+    'What is the message if the ban occurs?: ',
+  );
+  const messageNotBan = readlineSync.question(
+    'What is the message if the ban not occurs?: ',
+  );
 
-  const fileContent = generateFileContent(command, probabilityNumber, timeoutTime, messageBan, messageNotBan)
+  const fileContent = generateFileContent(
+    command,
+    probabilityNumber,
+    timeoutTime,
+    messageBan,
+    messageNotBan,
+  );
 
-  write(`commands/${command}.js`, fileContent)
+  write(`commands/${command}.js`, fileContent);
 
   // edit index.js with the new feature
   execSync(`sed -i '$i ${command}(message, user, client)' index.js`);
-  execSync(`sed -i "4a const ${command} = require('./commands/${command}')" index.js`);
+  execSync(
+    `sed -i "4a const ${command} = require('./commands/${command}')" index.js`,
+  );
 }
 
-module.exports = banCommand
+module.exports = banCommand;

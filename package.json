@@ -16,14 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node index.js"
   },
-  "keywords": [
-    "twitch",
-    "bot",
-    "chatbot",
-    "tmi",
-    "bot builder",
-    "bot creator"
-  ],
+  "keywords": ["twitch", "bot", "chatbot", "tmi", "bot builder", "bot creator"],
   "author": "Ederson Ferreira",
   "license": "MIT",
   "repository": {

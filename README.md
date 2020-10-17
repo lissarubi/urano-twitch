@@ -81,7 +81,7 @@ Reply the user in the mycommand message? [y/n]: y
 
 ### Pre-Build Commands
 
-Pre-Build Commands are a group of commands like Timeout command,  what you need to complete the informations and you can add it to your chatbot.
+Pre-Build Commands are a group of commands like Timeout command, what you need to complete the informations and you can add it to your chatbot.
 
 ```
 [1] Simple Command
