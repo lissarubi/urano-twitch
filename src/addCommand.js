@@ -1,6 +1,7 @@
 const readlineSync = require('readline-sync');
 const simpleCommand = require('./commandsScript/simpleCommand');
 const banCommand = require('./commandsScript/ban');
+const giveawayCommand = require('./commandsScript/giveaway')
 
 function addCommand() {
   const options1 = ['Simple Command', 'Pre-Build Commands'];
@@ -15,14 +16,19 @@ function addCommand() {
   }
 
   if (index == 1) {
-    const options2 = ['Timeout Command'];
+    const options2 = ['Timeout Command', 'Giveaway Command'];
     const index2 = readlineSync.keyInSelect(
       options2,
       'What Pre-Build command do you want?',
     );
 
-    if (index2 == 0) {
-      banCommand();
+    switch (index2) {
+      case 0:
+        banCommand();
+        break;
+      case 1:
+        giveawayCommand();
+        break;
     }
   }
 }

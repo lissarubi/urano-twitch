@@ -102,6 +102,7 @@ You can add a Timeout Command to your chat, defining the command, the probabilit
 
 ```
 [1] Timeout Command
+[2] Giveaway Command
 [0] CANCEL
 
 What Pre-Build command do you want? [1/0]: 1
@@ -126,6 +127,24 @@ What is the message if the ban not occurs?: Not Timeout!
 Now you have the timeout command in your Stream!
 
 ![timeout Example](assets/timeoutExample.png)
+
+#### Giveaway Command
+
+You can add a giveaway command to your chat. defining the start, enter, end and message of resutl.
+
+```
+[1] Timeout Command
+[2] Giveaway Command
+[0] CANCEL
+
+What Pre-Build command do you want? [1, 2, 0]: 2
+What is the start giveaway command? (without !): start
+What is the enter giveaway command? (without !): enter
+What is the end giveaway command? (without !): end
+What is the text of giveaway result?: Is the winner!
+```
+
+![Giveaway Example](assets/giveawayExample.png)
 
 ## Runing the your bot
 

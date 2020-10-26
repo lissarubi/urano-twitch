@@ -15,7 +15,7 @@ function generateFileContent(command, result, replyUser) {
 }
 
 function simpleCommand() {
-  let command = readlineSync.question('What is the command? (without !): ');
+  const command = readlineSync.question('What is the command? (without !): ');
   const result = readlineSync.question(
     `What is the result of the ${command}?: `,
   );
